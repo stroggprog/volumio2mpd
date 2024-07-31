@@ -19,6 +19,33 @@ $port = 6600;
 $pass = "";
 ```
 
+You should edit the `local.php` file which by default looks like this:
+```php
+// $buck is prepended to volumio path uri's
+// do not include anything that forms part of the MPD data folder
+//
+$buck = "Extended-Disk/";
+
+// the path where to fetch the volumio playlists from
+// probably a good idea to use a local copy
+//
+$in_path = __DIR__."/lists";
+
+// uncomment these lines if these variables don't already exist in your environment
+// Don't forget to change the values to something sane for your system
+//
+//putenv("MPD_HOST=localhost");
+//putenv("MPD_PORT=6600");
+//putenv("MPD_PASS=G0shVVutAbadPusswud");
+```
+
+The comments speak for themselves. Note there is no preceding `/` on `$buck`.
+Where possible, the environment variables should already exist so there is nowhere in the code anyone can scrape them from.
+
+Create a folder called `lists` as a subfolder of the current directory, and copy the volumio playlists into it.
+
+
+
 ## PHP-MPD
 This is an old mpd library that was developed for PHP v5.x, so there is a lot in it that will break. However, it is sufficiently usable that by changing 4 lines of code it works for the requirements of this applet.
 
