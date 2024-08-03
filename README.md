@@ -2,6 +2,8 @@
 
 This applet converts Volumio style playlists and uploads them to MPD.
 
+__This has been superceded by [volumio2mpd2](https://github.com/stroggprog/volumio2mpd2), which can perform multiple transformations, uses a new mpd class and a new error class.__
+
 It relies on PHP-MPD. The repo is here: https://github.com/jimmikristensen/PHP-MPD
 
 __DO NOT__ pull files from the repo, the class file has been edited to work with modern versions of php.
